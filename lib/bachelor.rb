@@ -31,13 +31,6 @@ end
 #   * Remember that dividing *integers* in Ruby always rounds down. In this case though, we want the normal math sort of rounding (where .5 and higher rounds *up*), instead. Consider the difference between `to_f` and `to_i`.
 
 def get_average_age_for_season(data, season)
-  s = data[season]
-  sum = 0
-
-  for c in s do
-  	sum += c['age'].to_f
-  end
-
-  f = (sum / s.size)
-  f.ceil
+  arr = data[season].collect { |p| p['age'] }
+	arr.inject(0.0) { |sum, el| sum + el } / arr.size
 end

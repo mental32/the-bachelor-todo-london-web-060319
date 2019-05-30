@@ -16,7 +16,7 @@ end
 #   * How will you keep track of contestants from a particular hometown? Think back to our looping lessons in which we set a counter variable equal to 0 and incremented that counter under certain conditions. 
 
 def count_contestants_by_hometown(data, hometown)
-  data.values.reduce([], :concat).select { |p| p['hometown'] == hometown }
+  data.values.reduce([], :concat).select { |p| p['hometown'] == hometown }.size
 end
 
 # 4. Build a method `get_occupation`, that takes in two arguments––the data hash and a string of a hometown. It returns the occupation of the first contestant who hails from that hometown.

@@ -39,5 +39,5 @@ def get_average_age_for_season(data, season)
   end
 
   f = (sum / s.size)
-  f.to_i + 1
+  f.ceil
 end

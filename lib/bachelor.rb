@@ -3,7 +3,7 @@
 #   * How will you check to see if a contestant's status equals "Winner"?
 
 def get_first_name_of_season_winner(data, season)
-  data[season]['name'].split.first
+  data[season].select { |p| p['status'] == 'Winner' }['name'].split.first
 end
 
 # 2. Build a method, `get_contestant_name`, that takes in the data hash and an occupation string and returns the name of the woman who has that occupation. 

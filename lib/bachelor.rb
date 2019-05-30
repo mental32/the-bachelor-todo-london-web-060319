@@ -32,5 +32,5 @@ end
 
 def get_average_age_for_season(data, season)
   arr = data[season].collect { |p| p['age'].to_f }
-	(arr.inject(0.0) { |sum, el| sum + el } / arr.size).ceil
+	(arr.inject(0.0) { |sum, el| sum + el } / arr.size).round
 end
